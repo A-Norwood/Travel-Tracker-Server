@@ -10,11 +10,11 @@ A user can add, update, and delete any trips, and has access to all trip informa
 Will be posted once deployed.
 
 ## Link to front end repo
-[Front End Repository] (https://github.com/A-Norwood/Travel-Tracker-client)
+[Front End Repository](https://github.com/A-Norwood/Travel-Tracker-client)
 
 
 ## Travel Tracker ERD
-[Travel Tracker ERD] (https://imgur.com/FVjnmA0)
+[Travel Tracker ERD](https://imgur.com/FVjnmA0)
 
 
 ## Technoligies Used
