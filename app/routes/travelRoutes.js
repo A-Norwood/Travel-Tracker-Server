@@ -30,7 +30,7 @@ const router = express.Router()
 // INDEX
 // GET /travel
 router.get('/travel', requireToken, (req, res, next) => {
-  Travel.find()
+  Travel.find({'owner': req.user.id})
     .then(travel => {
       return travel.map(travel => travel.toObject())
     })
@@ -62,11 +62,11 @@ router.post('/travel', requireToken, (req, res, next) => {
 // UPDATE
 // PATCH /travel/:id
 router.patch('/travel/:id', requireToken, removeBlanks, (req, res, next) => {
-  delete req.body.example.owner
+  delete req.body.travel.owner
   Travel.findById(req.params.id)
-    .then(example => {
-      requireOwnership(req, example)
-      return example.updateOne(req.body.example)
+    .then(travel => {
+      requireOwnership(req, travel)
+      return travel.updateOne(req.body.travel)
     })
     .then(() => res.sendStatus(204))
     .catch(next)
@@ -77,9 +77,9 @@ router.patch('/travel/:id', requireToken, removeBlanks, (req, res, next) => {
 router.delete('/travel/:id', requireToken, (req, res, next) => {
   Travel.findById(req.params.id)
     .then(handle404)
-    .then(example => {
-      requireOwnership(req, example)
-      example.deleteOne()
+    .then(travel => {
+      requireOwnership(req, travel)
+      travel.deleteOne()
     })
     .then(() => res.sendStatus(204))
     .catch(next)
