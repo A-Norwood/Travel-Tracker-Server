@@ -8,7 +8,8 @@ curl "${API}${URL_PATH}/${ID}" \
   --header "Authorization: Bearer ${TOKEN}" \
   --data '{
     "travel": {
-      "location": "'"${LOCATION}"'"
+      "location": "'"${LOCATION}"'",
+      "owner": "'"${OWNER}"'"
     }
   }'
 
