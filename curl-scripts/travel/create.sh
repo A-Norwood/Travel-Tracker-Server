@@ -9,8 +9,7 @@ curl "${API}${URL_PATH}" \
   --data '{
     "travel": {
       "location": "'"${LOCATION}"'",
-      "date": "'"${DATE}"'",
-      "owner": "'"${OWNER}"'"
+      "date": "'"${DATE}"'"
     }
   }'
 
