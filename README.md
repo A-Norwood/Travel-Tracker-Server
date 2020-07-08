@@ -5,7 +5,7 @@
 Travel Tracker is an app that tracks a user's previous travels. Each user can input locations they have been and the date for that location. A user can add, update, and delete any trips, and has access to all trip information for their login.
 
 ## Link to Deployed App
-[Link to Deployed Site](https://a-norwood.github.io/Travel-Tracker-client/)
+[Link to Deployed Site](https://salty-eyrie-87917.herokuapp.com/)
 
 
 ## Link to front end repo
