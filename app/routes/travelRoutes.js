@@ -51,7 +51,6 @@ router.get('/travel/:id', requireToken, (req, res, next) => {
 // POST /travel/
 router.post('/travel', requireToken, (req, res, next) => {
   req.body.travel.owner = req.user.id
-  // console.log('what is travelData ', travelData)
   Travel.create(req.body.travel)
     .then(travel => {
       res.status(201).json({ travel: travel.toObject() })
